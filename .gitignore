@@ -98,3 +98,6 @@ compiler.xml
 
 /assistant/src/main/resources/secrets.properties
 /assistant/target/classes/secrets.properties
+
+*.class
+*.jar
