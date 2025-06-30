@@ -18,8 +18,8 @@ public class GenerateEmailService {
     @Value("${gemini.api.key}")
     private String geminiKey;
 
-    public GenerateEmailService(WebClient webClient) {
-        this.webClient = webClient;
+    public GenerateEmailService(WebClient.Builder webClient) {
+        this.webClient = webClient.build();
     }
 
     public String generateReply(EmailRequest emailRequest) {
