@@ -28,6 +28,7 @@ public class GenerateEmailService {
         String response = webClient.post()
                 .uri(geminiApiUrl + geminiKey)
                 .header("Content-Type", "application/json")
+                .bodyValue(requestBody)
                 .retrieve()
                 .bodyToMono(String.class)
                 .block();
