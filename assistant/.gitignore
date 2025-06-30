@@ -96,4 +96,5 @@ idea/
 compiler.xml
 *.iml
 
-
+*.class
+*.jar
