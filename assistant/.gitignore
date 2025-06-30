@@ -37,3 +37,7 @@ Thumbs.db
 *.swp
 
 secrets.properties
+
+# Ignore compiled Java classes and build output
+*.class
+/target/
