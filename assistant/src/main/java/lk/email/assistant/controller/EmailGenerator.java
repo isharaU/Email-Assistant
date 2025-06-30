@@ -14,5 +14,5 @@ public class EmailGenerator {
     @PostMapping("/generate")
     public ResponseEntity<String> generateEmail(@RequestBody EmailRequest emailRequest) {
         return ResponseEntity.ok("");
-    }   
+    }
 }
