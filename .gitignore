@@ -91,3 +91,7 @@ $RECYCLE.BIN/
 
 # Other
 *.log
+
+.idea/
+compiler.xml
+*.iml

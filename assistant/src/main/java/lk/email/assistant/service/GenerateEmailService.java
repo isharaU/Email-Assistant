@@ -1,14 +1,19 @@
 package lk.email.assistant.service;
 
 import lk.email.assistant.entity.EmailRequest;
+import org.springframework.beans.factory.annotation.Value;
 
 import java.util.Map;
 
 public class GenerateEmailService {
+    @Value("${gemini.api.url}")
+    private String geminiApiUrl;
+    @Value("${gemini.api.key}")
+    private String geminiKey;
 
     public String generateReply(EmailRequest emailRequest) {
         String prompt = buildPrompt(emailRequest);
-        Map<String,Object> requestBody = craftRequest(prompt);
+        Map<String, Object> requestBody = craftRequest(prompt);
 
         return null;
     }
