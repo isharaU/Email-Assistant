@@ -37,3 +37,6 @@ compiler.xml
 .idea/
 
 secrets.properties
+
+Email Assistant.iml
+modules.xml
