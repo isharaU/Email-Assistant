@@ -96,7 +96,3 @@ idea/
 compiler.xml
 *.iml
 
-secrets.properties
-
-Email Assistant.iml
-modules.xml
