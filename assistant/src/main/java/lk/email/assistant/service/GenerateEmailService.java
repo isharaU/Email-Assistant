@@ -1,5 +1,7 @@
 package lk.email.assistant.service;
 
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import lk.email.assistant.entity.EmailRequest;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
@@ -23,8 +25,14 @@ public class GenerateEmailService {
     public String generateReply(EmailRequest emailRequest) {
         String prompt = buildPrompt(emailRequest);
         Map<String, Object> requestBody = craftRequest(prompt);
+        String response = webClient.post()
+                .uri(geminiApiUrl + geminiKey)
+                .header("Content-Type", "application/json")
+                .retrieve()
+                .bodyToMono(String.class)
+                .block();
 
-        return null;
+        return extractResponseContent(response);
     }
 
     private String buildPrompt(EmailRequest emailRequest) {
@@ -50,5 +58,22 @@ public class GenerateEmailService {
                         )
                 }
         );
+    }
+
+    private String extractResponseContent(String response) {
+        try {
+            ObjectMapper mapper = new ObjectMapper();
+            JsonNode rootNode = mapper.readTree(response);
+            return rootNode.path("candidates")
+                    .get(0)
+                    .path("content")
+                    .path("parts")
+                    .get(0)
+                    .path("text")
+                    .asText();
+
+        } catch (Exception e) {
+            return "Error processing request: " + e.getMessage();
+        }
     }
 }
