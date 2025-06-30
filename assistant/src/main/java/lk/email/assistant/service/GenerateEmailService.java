@@ -38,16 +38,21 @@ public class GenerateEmailService {
 
     private String buildPrompt(EmailRequest emailRequest) {
         StringBuilder prompt = new StringBuilder();
-        prompt.append("Generate an email reply for the following email.");
+        prompt.append("Write a professional email reply to the following message.");
+
         if (!emailRequest.getTone().trim().isBlank()) {
-            prompt.append("Use ");
-            prompt.append(emailRequest.getTone());
+            prompt.append(" The reply should have a ");
+            prompt.append(emailRequest.getTone().toLowerCase());
             prompt.append(" tone.");
         }
-        prompt.append("Please ignore the subject.");
-        prompt.append("\nReceived Email:\n").append(emailRequest.getEmailContent());
+
+        prompt.append(" You can ignore the original subject line.");
+        prompt.append("\n\n--- Original Email ---\n");
+        prompt.append(emailRequest.getEmailContent());
+
         return prompt.toString();
     }
+
 
     private Map<String, Object> craftRequest(String prompt) {
         return Map.of(
