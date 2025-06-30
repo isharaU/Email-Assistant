@@ -1,103 +1,47 @@
-# Byte-compiled / optimized / DLL files
-__pycache__/
-*.py[cod]
-*$py.class
-
-# C extensions
-*.so
-
-# Distribution / packaging
-.Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-*.egg-info/
-.installed.cfg
-*.egg
-
-# PyInstaller
-*.manifest
-*.spec
-
-# Installer logs
-pip-log.txt
-pip-delete-this-directory.txt
-
-# Unit test / coverage reports
-htmlcov/
-.tox/
-.nox/
-.coverage
-.coverage.*
-.cache
-nosetests.xml
-coverage.xml
-*.cover
-.hypothesis/
-.pytest_cache/
-
-# Jupyter Notebook
-.ipynb_checkpoints
-
-# pyenv
-.python-version
-
-# mypy
-.mypy_cache/
-.dmypy.json
-dmypy.json
-
-# Pyre type checker
-.pyre/
-
-# VS Code
-.vscode/
-
-# JetBrains IDEs
-.idea/
-!.idea/codeStyles
-!.idea/inspectionProfiles
-!.idea/misc.xml
-!.idea/modules.xml
-!.idea/workspace.xml
-.idea/vcs.xml
-
-# Environment variables
-.env
-.env.*
-.venv/
-venv/
-ENV/
-env/
-env.bak/
-venv.bak/
-
-# macOS
+# === GLOBAL IGNORES ===
 .DS_Store
-
-# Windows
 Thumbs.db
-ehthumbs.db
-Desktop.ini
-$RECYCLE.BIN/
 
-# Other
+# === IDEs ===
+.idea/
+.vscode/
+*.swp
+
+# === Logs ===
+logs/
 *.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
-idea/
-compiler.xml
-*.iml
+# === Node / React Frontend ===
+frontend/node_modules/
+frontend/build/
+frontend/.env
+frontend/.next/
+frontend/.turbo/
+frontend/dist/
 
-/assistant/src/main/resources/secrets.properties
-/assistant/target/classes/secrets.properties
+# === Coverage Reports ===
+frontend/coverage/
+coverage/
 
-*.class
-*.jar
+# === System Files ===
+*.bak
+*.tmp
+*.temp
+*.orig
+*.rej
+
+# === Optional Frontend Caches ===
+frontend/.eslintcache
+frontend/.parcel-cache
+frontend/.sass-cache
+frontend/.cache
+
+# === macOS ===
+__MACOSX/
+
+# === Windows ===
+ehthumbs.db
+desktop.ini
