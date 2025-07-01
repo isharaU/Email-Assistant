@@ -8,6 +8,8 @@ import {
   InputLabel,
   Select,
   MenuItem,
+  Button,
+  CircularProgress,
 } from '@mui/material';
 import './App.css';
 
@@ -52,6 +54,11 @@ function App() {
             <MenuItem value="Concise">Concise</MenuItem>
           </Select>
         </FormControl>
+
+        <Button>
+          {loading ? <CircularProgress size={24} /> : 'Generate Reply'}
+        </Button>
+
       </Box>
     </Container>
   );
