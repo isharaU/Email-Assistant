@@ -1,5 +1,6 @@
-import { Box, Container, Typography } from '@mui/material'
-import './App.css'
+import { useState } from 'react'; // ✅ You forgot this!
+import { Box, Container, Typography, TextField } from '@mui/material'; // ✅ TextField wasn't imported
+import './App.css';
 
 function App() {
   const [emailContent, setEmailContent] = useState('');
@@ -10,12 +11,12 @@ function App() {
   const [reply, setReply] = useState('');
 
   return (
-    <Container maxWidth="md" sx={{py: 4}}>
+    <Container maxWidth="md" sx={{ py: 4 }}>
       <Typography variant="h4" component="h1" gutterBottom>
         Smart Email Assistant
       </Typography>
 
-      <Box sx={{mx: 3}}>
+      <Box sx={{ mx: 3 }}>
         <TextField
           fullWidth
           multiline
@@ -24,13 +25,11 @@ function App() {
           label="Email Content"
           value={emailContent || ''}
           onChange={(e) => setEmailContent(e.target.value)}
-          sx={{mb: 2}}
+          sx={{ mb: 2 }}
         />
       </Box>
     </Container>
-  )
+  );
 }
 
-
-
-export default App
+export default App;
