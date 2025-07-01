@@ -28,22 +28,13 @@ function App() {
     setReply('');
 
     try {
-      const response = await fetch('http://localhost:5000/api/generate-reply', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ emailContent, tone }),
+      const response = await axios.post('http://localhost:8080/api/email/generate', {
+        emailContent,
+        tone
       });
-
-      if (!response.ok) {
-        throw new Error('Failed to generate reply');
-      }
-
-      const data = await response.json();
-      setGeneratedReply(data.reply);
+      setGeneratedReply(response.data.reply || (typeof response.data === 'string' ? response.data : JSON.stringify(response.data)));
     } catch (error) {
-      setError(error.message);
+      setError(error.message || 'Failed to generate reply');
     } finally {
       setLoading(false);
     }
