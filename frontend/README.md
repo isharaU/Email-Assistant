@@ -1,21 +1,21 @@
-# 📬 Email Reply Generator (React + MUI + Axios)
+# Email Reply Generator UI (React + MUI + Axios)
 
 A smart email assistant that generates contextual replies based on the input email and an optional tone. Built with **React**, **Material UI**, and **Axios**. Backend API should be running locally to handle the request.
 
 ---
 
-## 🚀 Features
+## Features
 
-- ✍️ Input original email content
-- 🎯 Choose tone (optional): Formal, Casual, Friendly, etc.
-- 🤖 Generate a smart email reply via backend API
-- ⏳ Shows loading spinner while generating
-- 🧾 Read-only output field for reply
-- 📋 One-click copy to clipboard
+- Input original email content
+- Choose tone (optional): Formal, Casual, Friendly, etc.
+- Generate a smart email reply via backend API
+- Shows loading spinner while generating
+- Read-only output field for reply
+- One-click copy to clipboard
 
 ---
 
-## 🧰 Tech Stack
+## Tech Stack
 
 - **Frontend:** React (Vite or CRA), Material UI
 - **Networking:** Axios
@@ -24,7 +24,7 @@ A smart email assistant that generates contextual replies based on the input ema
 
 ---
 
-## 📦 Installation
+## Installation
 
 ```bash
 # Clone this repo
@@ -40,7 +40,7 @@ npm run dev
 
 ---
 
-## 🌐 Backend API
+## Backend API
 
 > Make sure your backend is running at `http://localhost:8080`.
 
@@ -64,13 +64,13 @@ Content-Type: application/json
 }
 ```
 
-## 👨‍💻 Author
+## Author
 
-Built with ❤️ by [@isharaU](https://github.com/isharaU)
+Built by [@isharaU](https://github.com/isharaU)
 
 ---
 
-## 📝 License
+## License
 
 This project is licensed under the MIT License.
 
