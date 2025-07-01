@@ -21,6 +21,34 @@ function App() {
   const [error, setError] = useState('');
   const [reply, setReply] = useState('');
 
+  const handleSubmit = async () => {
+    setLoading(true);
+    setError('');
+    setGeneratedReply('');
+    setReply('');
+
+    try {
+      const response = await fetch('http://localhost:5000/api/generate-reply', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ emailContent, tone }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to generate reply');
+      }
+
+      const data = await response.json();
+      setGeneratedReply(data.reply);
+    } catch (error) {
+      setError(error.message);
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <Container maxWidth="md" sx={{ py: 4 }}>
       <Typography variant="h4" component="h1" gutterBottom>
@@ -55,11 +83,48 @@ function App() {
           </Select>
         </FormControl>
 
-        <Button>
+        <Button
+          variant="contained"
+          color="primary"
+          fullWidth
+          onClick={handleSubmit}
+          disabled={loading || !emailContent.trim()}
+        >
           {loading ? <CircularProgress size={24} /> : 'Generate Reply'}
         </Button>
 
       </Box>
+      {error && (
+        <Typography color="error" sx={{ mb: 2 }}>
+          Error: {error}
+        </Typography>
+      )}
+
+      {generatedReply && (
+        <Box sx={{ mt: 4 }}>
+          <Typography variant="h6" gutterBottom>
+            Generated Reply:
+          </Typography>
+          <TextField
+            fullWidth
+            multiline
+            rows={6}
+            variant="outlined"
+            value={generatedReply || ''}
+            InputProps={{
+              readOnly: true,
+            }}
+          />
+          <Button
+            variant="contained"
+            color="secondary"
+            sx={{ mt: 2 }}
+            onClick={() => navigator.clipboard.writeText(generatedReply)}
+          >
+            Copy to Clipboard
+          </Button>
+        </Box>
+      )}
     </Container>
   );
 }
