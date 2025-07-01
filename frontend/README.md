@@ -1,12 +1,78 @@
-# React + Vite
+# 📬 Email Reply Generator (React + MUI + Axios)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A smart email assistant that generates contextual replies based on the input email and an optional tone. Built with **React**, **Material UI**, and **Axios**. Backend API should be running locally to handle the request.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- ✍️ Input original email content
+- 🎯 Choose tone (optional): Formal, Casual, Friendly, etc.
+- 🤖 Generate a smart email reply via backend API
+- ⏳ Shows loading spinner while generating
+- 🧾 Read-only output field for reply
+- 📋 One-click copy to clipboard
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🧰 Tech Stack
+
+- **Frontend:** React (Vite or CRA), Material UI
+- **Networking:** Axios
+- **Backend:** Expects a local API at `http://localhost:8080/api/email/generate`  
+  *(Returns JSON with a `reply` field or a plain string)*
+
+---
+
+## 📦 Installation
+
+```bash
+# Clone this repo
+git clone https://github.com/isharaU/Email-Assistant.git
+cd Email-Assistant
+
+# Install dependencies
+npm install
+
+# Start the dev server
+npm run dev  
+````
+
+---
+
+## 🌐 Backend API
+
+> Make sure your backend is running at `http://localhost:8080`.
+
+### Example POST request:
+
+```bash
+POST /api/email/generate
+Content-Type: application/json
+
+{
+  "emailContent": "Hello, I’d like to schedule a meeting next week.",
+  "tone": "Formal"
+}
+```
+
+### Expected Response:
+
+```json
+{
+  "reply": "Dear Sir/Madam, Thank you for your message. I would be happy to arrange a meeting next week..."
+}
+```
+
+## 👨‍💻 Author
+
+Built with ❤️ by [@isharaU](https://github.com/isharaU)
+
+---
+
+## 📝 License
+
+This project is licensed under the MIT License.
+
+
+
