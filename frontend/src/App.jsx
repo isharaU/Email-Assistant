@@ -1,5 +1,14 @@
-import { useState } from 'react'; 
-import { Box, Container, Typography, TextField } from '@mui/material'; 
+import { useState } from 'react';
+import {
+  Box,
+  Container,
+  Typography,
+  TextField,
+  FormControl,
+  InputLabel,
+  Select,
+  MenuItem,
+} from '@mui/material';
 import './App.css';
 
 function App() {
@@ -27,6 +36,22 @@ function App() {
           onChange={(e) => setEmailContent(e.target.value)}
           sx={{ mb: 2 }}
         />
+
+        <FormControl fullWidth sx={{ mb: 2 }}>
+          <InputLabel>Tone (Optional)</InputLabel>
+          <Select
+            value={tone}
+            label="Tone (Optional)"
+            onChange={(e) => setTone(e.target.value)}
+          >
+            <MenuItem value="">None</MenuItem>
+            <MenuItem value="Formal">Formal</MenuItem>
+            <MenuItem value="Casual">Casual</MenuItem>
+            <MenuItem value="Friendly">Friendly</MenuItem>
+            <MenuItem value="Professional">Professional</MenuItem>
+            <MenuItem value="Concise">Concise</MenuItem>
+          </Select>
+        </FormControl>
       </Box>
     </Container>
   );
