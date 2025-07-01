@@ -1,15 +1,15 @@
-# 💡 Smart Email Reply Generator (AI-Powered)
+# Smart Email Reply Generator (AI-Powered)
 
 This project is a full-stack AI-powered application designed to generate email replies automatically based on the content and tone you choose.
 
 It includes:
 
-- ✅ A modern **web application** where users can paste email content and get AI-generated replies instantly.
-- ✅ A lightweight **Chrome extension** that integrates directly into Gmail, allowing you to generate replies without leaving your inbox.
+- A modern **web application** where users can paste email content and get AI-generated replies instantly.
+- A lightweight **Chrome extension** that integrates directly into Gmail, allowing you to generate replies without leaving your inbox.
 
 ---
 
-## 📦 Project Structure
+## Project Structure
 
 ```
 
@@ -24,7 +24,7 @@ smart-email-reply-generator/
 
 ---
 
-## 🧠 What It Does
+## What It Does
 
 - Automatically reads your email content
 - Lets you choose a tone (formal, friendly, casual, etc.)
@@ -33,7 +33,7 @@ smart-email-reply-generator/
 
 ---
 
-## 🚀 Why This Project?
+## Why This Project?
 
 This project is built as a real-world, resume-ready application that showcases:
 
@@ -43,7 +43,7 @@ This project is built as a real-world, resume-ready application that showcases:
 
 ---
 
-## 📁 Individual Readmes
+## Individual Readmes
 
 Each folder contains its own README with detailed setup and technical instructions:
 
@@ -52,20 +52,20 @@ Each folder contains its own README with detailed setup and technical instructio
 
 ---
 
-## 🧪 Demo & Future Plans
+## Demo & Future Plans
 
 We're working on deploying the app publicly and publishing the Chrome extension to the Web Store. Stay tuned for updates!
 
 ---
 
-## 🔐 API Keys
+## API Keys
 
 For privacy and security, this project uses environment variables to handle API keys and sensitive config. You’ll need to set those up in `.env` files (see individual readmes).
 
 ---
 
-## 👨‍💻 Author
+## Author
 
-Made with ❤️ by [@isharaU](https://github.com/isharaU)
+Made by [@isharaU](https://github.com/isharaU)
 
 
