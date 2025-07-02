@@ -90,6 +90,8 @@ Each folder contains its own README with detailed setup and technical instructio
 
 We're working on deploying the app publicly and publishing the Chrome extension to the Web Store. Stay tuned for updates!
 
+[![Watch the Demo](/resources/image.png)](https://drive.google.com/file/d/1TQHHrASsxL4OGoc_1MTyI5sQlytLdPx-/view?usp=drive_link)
+
 ---
 
 ## API Keys
