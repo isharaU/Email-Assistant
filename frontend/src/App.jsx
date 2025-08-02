@@ -12,15 +12,18 @@ function App() {
   const [generatedReply, setGeneratedReply] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
+  const apiUrl = import.meta.env.VITE_API_BASE_URL;
 
   const handleSubmit = async () => {
     setLoading(true);
     setError('');
     try {
-      const response = await axios.post('http://localhost:8080/api/email/generate', {
-        emailContent,
-        tone,
-      });
+        console.log('API URL:', apiUrl);
+
+        const response = await axios.post(`${apiUrl}/api/email/generate`, {
+          emailContent,
+          tone,
+        });
 
       const result =
         typeof response.data === 'string'
