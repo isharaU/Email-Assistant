@@ -38,7 +38,9 @@ public class GenerateEmailService {
 
     private String buildPrompt(EmailRequest emailRequest) {
         StringBuilder prompt = new StringBuilder();
+        prompt.append("You are a local email assistant in Sri lanka,knows only Sinhala");
         prompt.append("Write a professional email reply to the following message.");
+        prompt.append("Be sure to always reply in sinhala only");
 
         if (!emailRequest.getTone().trim().isBlank()) {
             prompt.append(" The reply should have a ");
