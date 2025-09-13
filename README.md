@@ -1,10 +1,10 @@
-# Smart Email Reply Generator (AI-Powered)
+# Sinhala Email Reply Generator (AI-Powered)
 
-This project is a full-stack, AI-powered application designed to automatically generate email replies based on the content and tone you choose.
+This project is a full-stack, AI-powered application designed to automatically generate **email replies in Sinhala** based on the content and tone you choose.
 
 It includes:
 
-* A modern **web application** where users can paste email content and get AI-generated replies instantly.
+* A modern **web application** where users can paste email content and get AI-generated Sinhala replies instantly.
 * A lightweight **Chrome extension** that integrates directly into Gmail, allowing you to generate replies without leaving your inbox.
 
 ---
@@ -19,7 +19,7 @@ smart-email-reply-generator/
 ```
 
 * The **frontend** is built using React and Material UI for a clean, responsive interface.
-* The **backend** uses Spring Boot and Google Gemini AI to generate intelligent and context-aware replies.
+* The **backend** uses Spring Boot and Google Gemini AI to generate intelligent and context-aware Sinhala replies.
 * The **Chrome extension** injects an “AI Reply” button directly into Gmail, calling your backend API to generate and insert a response.
 
 ---
@@ -28,20 +28,20 @@ smart-email-reply-generator/
 
 * Automatically reads your email content
 * Lets you choose a tone (formal, friendly, casual, etc.)
-* Uses AI to draft a personalized reply
+* Uses AI to draft a personalized **Sinhala reply**
 * Works either through the web UI or directly in Gmail via a browser extension
 
 ---
 
 ## Chrome Extension: Email Writer Assistant
 
-The **Email Writer Assistant** is a Chrome extension that enhances Gmail with AI reply generation.
+The **Email Writer Assistant** is a Chrome extension that enhances Gmail with AI-generated Sinhala replies.
 
 ### Features
 
 * Adds an "AI Reply" button inside Gmail's compose toolbar
 * Sends the current email content to your backend API
-* Inserts the AI-generated response into the email compose area
+* Inserts the AI-generated **Sinhala response** into the email compose area
 
 ### Installation
 
@@ -66,7 +66,7 @@ The **Email Writer Assistant** is a Chrome extension that enhances Gmail with AI
 
 ## Demo & Future Plans
 
-* **Chrome Extension Demo:** Try the AI-powered email reply assistant online:
+* **Chrome Extension Demo:** Try the AI-powered **Sinhala email reply assistant** online:
   [https://email-assistant-liart.vercel.app/](https://email-assistant-liart.vercel.app/)
 
 We’re still working on full public deployment and publishing the Chrome extension to the Web Store. Stay tuned for updates!
