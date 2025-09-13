@@ -90,7 +90,3 @@ For privacy and security, this project uses **environment variables** to handle 
 ## Author
 
 Made by [@isharaU](https://github.com/isharaU)
-
----
-
-Do you want me to add that too?
