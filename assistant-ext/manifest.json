@@ -1,5 +1,5 @@
 {
-    "name": "Sinhala Email Writer Assitant",
+    "name": "Sinhala Email Assitant",
     "description": "AI-powered email reply generator",
     "version": "1.0",
     "manifest_version": 3,
@@ -23,6 +23,6 @@
     }
   ],
     "action": {
-      "default_title": "Sinhala Email Writer Assitant"
+      "default_title": "Sinhala Email Assitant"
     }
   }
