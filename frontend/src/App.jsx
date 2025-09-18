@@ -56,7 +56,7 @@ function App() {
           gutterBottom
           sx={{ textAlign: 'center', color: '#1976d2', fontWeight: 'bold', mb: 4 }}
         >
-          Smart Email Assistant
+          සිංහල Email Assistant
         </Typography>
 
         <EmailInputForm
