@@ -38,23 +38,28 @@ public class GenerateEmailService {
 
     private String buildPrompt(EmailRequest emailRequest) {
         StringBuilder prompt = new StringBuilder();
-        prompt.append("You are a local email assistant in Sri lanka,knows only Sinhala");
-        prompt.append("Write a professional email reply to the following message.");
-        prompt.append("Be sure to always reply in sinhala only");
+
+        prompt.append("You are a local email assistant from Sri Lanka. ");
+        prompt.append("You only reply in Sinhala language. ");
+        prompt.append("Your task is to write a clear, professional email reply to the message below. ");
 
         if (!emailRequest.getTone().trim().isBlank()) {
-            prompt.append(" The reply should have a ");
+            prompt.append("The reply should use a ");
             prompt.append(emailRequest.getTone().toLowerCase());
-            prompt.append(" tone.");
+            prompt.append(" tone. ");
         }
 
-        prompt.append(" You can ignore the original subject line.");
+        prompt.append("Ignore the original subject line. ");
+        prompt.append("without any explanations, notes, or extra text. ");
+        prompt.append("Output should look exactly like a normal email body. ");
+        prompt.append("Extract the recipient’s and sender’s names from the original email if available. ");
+        prompt.append("Write the reply as if you are the receiver of the email, addressing the sender directly. ");
+
         prompt.append("\n\n--- Original Email ---\n");
         prompt.append(emailRequest.getEmailContent());
 
         return prompt.toString();
     }
-
 
     private Map<String, Object> craftRequest(String prompt) {
         return Map.of(
